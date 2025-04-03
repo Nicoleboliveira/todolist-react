@@ -1,15 +1,25 @@
-import { useState } from 'react'
+import { Header } from "./components/Header"
+import { Create } from "./components/Create"
+import { List } from "./components/list";
+
 import './global.css'
+import styles from "./App.module.css";
+
+
 
 export function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
-      <p>Contador: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Aumentar</button>
+      <Header />
+
+      <div className={styles.wrapper}>
+        <Create />
+        <List />
+      </div>
+     
     </div>
   )
 }
 
-export default App
+
