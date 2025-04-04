@@ -30,6 +30,7 @@
   padding: 2px 8px;
   border-radius: 1rem;
 }
+
 .block2 {
   display: flex;
   align-items: center;
@@ -37,11 +38,13 @@
   text-align: center;
   gap: 0.5rem;
 }
+
 .block2 p {
   color: var(--purple);
   font-weight: bold;
   letter-spacing: 0.04rem;
 }
+
 .block2 strong {
   display: flex;
   align-items: center;
@@ -57,15 +60,26 @@
   margin-top: 1.5rem;
 }
 
-.containerList div {
+/* Nova estrutura da tarefa */
+.task {
   background: var(--gray-500);
-  border-radius: 8px;
   border: 1px solid var(--gray-400);
-  box-shadow: 0px 2px 0.5rem hsla(0, 0%, 0%, 0.2);
-  display: flex;
-  align-items: flex-start;
+  border-radius: 8px;
   padding: 1rem;
-  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  box-shadow: 0px 2px 0.5rem hsla(0, 0%, 0%, 0.2);
+}
+
+/* Organização do checkbox e texto */
+.taskContent {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  overflow-wrap: anywhere;
 }
 
 .checkbox {
@@ -98,7 +112,6 @@
   content: "✔";
   color: white;
   font-size: 13px;
-
   transition: background 0.3s ease-in-out;
 }
 
@@ -109,9 +122,18 @@
 
 .containerList p {
   line-height: 1.4;
-  width: 39.5rem;
-  height: 2.5rem;
   letter-spacing: 0.01rem;
+  width: 39.5rem;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+/* Separação entre tarefas */
+.containerList .task + .task {
+  margin-top: 0.75rem;
 }
 
 .trashIcon {
@@ -123,6 +145,31 @@
   color: #e25858;
 }
 
-.containerList div + div {
-  margin-top: 0.75rem;
+.trashButton {
+  background: transparent;
+  border: none;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layout vazio */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-300);
+  padding: 2rem;
+  border-top: 1px solid #333333;
+  gap: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 1.5rem;
+}
+
+.empty svg {
+  color: var(--gray-400);
 }
