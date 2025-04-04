@@ -17,12 +17,30 @@ export function List() {
 
       <div className={styles.containerList}>
         <div>
-          <input type="checkbox" />
+          <input type="checkbox" className={styles.checkbox} />
           <p>
             Integer urna interdum massa libero auctor neque turpis turpis
             semper. Duis vel sed fames integer.
           </p>
-          <Trash />
+          <Trash className={styles.trashIcon} size={20} weight="light" />
+        </div>
+
+        <div>
+          <input type="checkbox" className={styles.checkbox} />
+          <p>
+            Integer urna interdum massa libero auctor neque turpis turpis
+            semper. Duis vel sed fames integer.
+          </p>
+          <Trash className={styles.trashIcon} size={20} weight="light" />
+        </div>
+
+        <div>
+          <input type="checkbox" className={styles.checkbox} />
+          <p>
+            Integer urna interdum massa libero auctor neque turpis turpis
+            semper. Duis vel sed fames integer.
+          </p>
+          <Trash className={styles.trashIcon} size={20} weight="light" />
         </div>
       </div>
     </div>

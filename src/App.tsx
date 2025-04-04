@@ -1,14 +1,11 @@
-import { Header } from "./components/Header"
-import { Create } from "./components/Create"
-import { List } from "./components/list";
+import { Header } from "./components/Header";
+import { Create } from "./components/Create";
+import { List } from "./components/List";
 
-import './global.css'
+import "./global.css";
 import styles from "./App.module.css";
 
-
-
 export function App() {
-
   return (
     <div>
       <Header />
@@ -17,9 +14,6 @@ export function App() {
         <Create />
         <List />
       </div>
-     
     </div>
-  )
+  );
 }
-
-
